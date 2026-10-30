@@ -1,5 +1,5 @@
-# VitialsDA
+# VitalsDA
 
-VitialsDA is building healthcare software.
+VitalsDA is building healthcare software.
 
 Not yet released.
