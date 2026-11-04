@@ -1,0 +1,65 @@
+name: Spec / work item
+description: A unit of work, specified before any code is written (FDA discipline).
+title: "<type>(<scope>): <short description>"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title MUST be a Conventional Commit (feat, fix, docs, style, refactor, perf,
+        test, build, ci, chore, revert). The operator is assigned automatically.
+        Group related work as sub-issues under a parent issue.
+  - type: input
+    id: parent
+    attributes:
+      label: Parent issue
+      description: For grouped work, the parent issue (e.g. #12). Leave blank if none.
+      placeholder: "#12"
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is being built and why. State the problem and the intended outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements (RFC 2119)
+      description: Use MUST / SHOULD / MAY. These become traceability matrix rows.
+      placeholder: |
+        - The service MUST ...
+        - The service SHOULD ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Objective, testable conditions that mean this is done.
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Task checklist
+      description: The sub-agent-driven task list, labeled "Phase X . Task N".
+      placeholder: |
+        - [ ] Phase X . Task 1: ...
+        - [ ] Phase X . Task 2: ...
+    validations:
+      required: true
+  - type: textarea
+    id: traceability
+    attributes:
+      label: Traceability and FDA notes
+      description: Linked requirement IDs, risk IDs, and any auth touchpoints to mark with TODO(auth).
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: How the acceptance criteria will be verified (tests, run the app, MCP tools).
+    validations:
+      required: true
