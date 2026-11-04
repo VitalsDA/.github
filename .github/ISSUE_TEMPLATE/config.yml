@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Engineering knowledge base
+    url: https://github.com/VitalsDA/vitalsda-docs-engineering
+    about: Specs, ADRs, the roadmap, and the FDA compliance baseline live here.
